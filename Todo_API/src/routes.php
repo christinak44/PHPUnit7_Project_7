@@ -5,8 +5,8 @@ $app->get('/', function ($request, $response, $args) {
     $endpoints = [
         'all tasks' => $this->api['api_url'].'/todos',
         'single task' => $this->api['api_url'].'/todos/{task_id}',
-        'subtasks by task' => '/todos{task_id}/subtasks', //<---- subtask placeholder
-        'single subtask' => '/todos{task_id}/subtasks/{subtask_id}', //<---- subtask placeholder
+        'subtasks by task' => '/todos/{task_id}/subtasks', //<---- subtask placeholder
+        'single subtask' => '/todos/{task_id}/subtasks/{subtask_id}', //<---- subtask placeholder
         'help' => $this->api['base_url'].'/',
     ];
     $result = [
